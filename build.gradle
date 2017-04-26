@@ -12,12 +12,15 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.github.samueltbrown.cucumber" version "0.9"
+}
+
+apply plugin: 'checkstyle'
+
 allprojects {
     repositories {
         jcenter()
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
